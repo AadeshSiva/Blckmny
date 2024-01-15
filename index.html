@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlckMny</title>
+    <link rel="icon" href="icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="asserts/style.css">
+    <script src="asserts/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="asserts/logo.svg" alt="BlckMny" class="logo">
+        <span class="headeroptions">
+            <img src="asserts/search.svg" alt="search" class="search" onclick="menuopen(0)">
+            <img src="asserts/cart.svg" alt="cart" class="cart" onclick="menuopen(1)">
+            <img id="burger" src="asserts/burger.svg" alt="" class="burger" onclick="menuopen(2)">
+        </span>
+    </header>
+    <nav id="nav">
+        <div class="navnav">
+            <img id="backarr" onclick="menuback()" src="asserts/back.svg" alt="">
+            <img class="wrong" onclick="menuclose()" src="asserts/wrong.svg" alt="">
+        </div>
+        <div id="burgerlist" class="burgerlist">
+            <p onclick="burgerlistinner(0)" class="navtxt">Collections</p>
+            <p onclick="burgerlistinner(1)" class="navtxt">Top</p>
+            <p onclick="burgerlistinner(2)" class="navtxt">Bottom</p>
+            <p onclick="burgerlistinner(3)" class="navtxt">Footware</p>
+            <p onclick="burgerlistinner(4)" class="navtxt">Accessories</p>
+            <p onclick="burgerlistinner(5)" class="navtxt">My Order</p>
+            <p onclick="burgerlistinner(6)" class="navtxt">Account</p>
+            <p onclick="burgerlistinner(7)" class="navtxt">Help</p>
+        </div>
+        <!----------------------------------------------------------------------- collectionlist -->
+        <div id="collectionlist" class="collectionlist burgerlistinner">
+            <p class=" burgerlisthead">Collections</p>
+            <a href="" class="navtxtin">Collection 1</a>
+            <a href="" class="navtxtin">Collection 2</a>
+            <a href="" class="navtxtin">Collection 3</a>
+            <a href="" class="navtxtin">Collection 4</a>
+        </div>
+        <!------------------------------------------------------------------------------- toplist -->
+        <div id="toplist" class="toplist burgerlistinner">
+            <p class=" burgerlisthead">Casuals</p>
+            <a href="" class="navtxtin">Sweatshirts</a>
+            <a href="" class="navtxtin">Hoodies</a>
+            <a href="" class="navtxtin">Sweaters</a>
+            <a href="" class="navtxtin">Party Shirts</a>
+            <p class=" burgerlisthead">Formals</p>
+            <a href="" class="navtxtin">Polo T-Shirts</a>
+            <a href="" class="navtxtin">Plain Shirts</a>
+        </div>
+        <!------------------------------------------------------------------------------- Bottomlist -->
+        <div id="bottomlist" class="bottomlist burgerlistinner">
+            <p class=" burgerlisthead">Bottoms</p>
+            <a href="" class="navtxtin">Full Pants</a>
+            <a href="" class="navtxtin">Shorts</a>
+            <a href="" class="navtxtin">Tracks</a>
+        </div>
+        <!------------------------------------------------------------------------------- footwarelist -->
+        <div id="footwarelist" class="footwarelist burgerlistinner">
+            <p class="searchhead burgerlisthead">Footwares</p>
+            <a href="" class="navtxtin">Sneakers</a>
+            <a href="" class="navtxtin">Slides</a>
+        </div>
+        <!------------------------------------------------------------------------------- accessorieslist -->
+        <div id="accessorieslist" class="accessorieslist burgerlistinner">
+            <p class=" burgerlisthead">Accessories</p>
+            <a href="" class="navtxtin">Chains</a>
+            <a href="" class="navtxtin">Rings</a>
+            <a href="" class="navtxtin">Bracelets</a>
+            <a href="" class="navtxtin">Cap</a>
+        </div>
+        <!----------------------------------------------------------------------------------- accountlist -->
+        <div id="accountlist" class="accountlist burgerlistinner">
+            <div class="optionstop optionstopaccount">
+                <p onclick="profile(2)" id="logout"><img src="asserts/logout.svg" alt="">Log out</p>
+                <p onclick="profile(1)" id="fav"><img id="favim" src="asserts/favw.svg" alt=""> favourites</p>
+                <p onclick="profile(0)" id="alorders"><img src="asserts/orders.svg" alt="">Orders</p>
+                <p id="profilebtn" onclick="profile(3)" style="z-index: 5;">
+                    <img src="asserts/profile.svg" alt="">Profile
+                </p>
+                <p id="editbtn" onclick="usereditOrders()" style="z-index: 5;">
+                    <img src="asserts/edit.svg" alt="">Edit
+                </p>
+            </div>
+            <div id="userdetails" class="userdetails">
+                <span>
+                    <h6>User Name:</h6>
+                    <p id="username" contenteditable="false">Aadesh Siva</p>
+                </span>
+                <span>
+                    <h6>Email:</h6>
+                    <p>iaadeshsiva@gmail.com</p>
+                </span>
+                <span>
+                    <h6>Address:</h6>
+                    <p id="address" contenteditable="false">23, Muthiaya Muthaliar Street, Muthialpet, Puducherry.</p>
+                </span>
+                <span>
+                    <h6>City:</h6>
+                    <p id="city" contenteditable="false">Puducherry.</p>
+                </span>
+                <span>
+                    <h6>Pin Code:</h6>
+                    <p id="pin" contenteditable="false">607536</p>
+                </span>
+                <span>
+                    <h6>Phone:</h6>
+                    <p id="phone" contenteditable="false">9865732187</p>
+                </span>
+            </div>
+        </div>
+        <div id="myorders" class="myorders burgerlistinner">
+            <div class="orderstype">
+                <p>My Cart</p>
+                <p>Delivered</p>
+                <p>In Process</p>
+            </div>
+        </div>
+        <div id="logoutcon" class="logoutlist burgerlistinner">
+            <span class="logoutcon">
+                <p>Confirm to log out ?</p>
+                <span>
+                    <p>Confirm</p>
+                    <p onclick="cancelbtn()">Cancel</p>
+                </span>
+            </span>
+
+        </div>
+        <!-- -----------------------------------------------------------------------------------------search -->
+        <div id="searchlist" class="searchlist">
+            <form class="searchinput">
+                <input autocomplete="off" placeholder="Search" type="search" value="" id="searchin" onkeyup="search()">
+            </form>
+            <!---------------------------------------------------------suggestions -->
+            <div class="links Suggested" id="Suggested">
+                <p id="sughead" class="searchhead suggesthead">Suggested links</p>
+                <p class="searchhead" id="notfound">&#128683; Product Not Found</p>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">Red shirt</a>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">Red pant</a>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">white pant</a>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">green shirt</a>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">yellow pant</a>
+            </div>
+            <!---------------------------------------------------------suggestions -->
+            <div class="trend" id="trend">
+                <p class="searchhead">Trending links</p>
+                <a href="" class="navtxt"><img src="asserts/trend.svg" alt="">Trend 1</a>
+                <a href="" class="navtxt"><img src="asserts/trend.svg" alt="">Trend 2</a>
+                <a href="" class="navtxt"><img src="asserts/trend.svg" alt="">Trend 3</a>
+                <a href="" class="navtxt"><img src="asserts/trend.svg" alt="">Trend 4</a>
+            </div>
+        </div>
+        <footer class="navfooter">
+            <a href="">&bull; Instragram</a>
+            <a href="">&bull; Youtube</a>
+            <a href="">&bull; LinkedIn</a>
+            <p style="color: #8e8e8e;font-weight: bolder; margin-left: 4em;">&copy;Blckmny</p>
+        </footer>
+    </nav>
+    <section class="homecontent">
+        <div class="sectiontxt">
+            <p><strong>Twenty-three</strong><br> 23 minutes later, the train arrived,<br> ending the prolonged wait.</p>
+            <a href="" class="view">View</a>
+        </div>
+        <img src="asserts/banner1.svg" alt="">
+    </section>
+    <section class="section2">
+        <div class="sectiontxt">
+            <p><strong>G Green</strong><br> Grey skies blanket the city, casting a <br> subdued, tranquil atmosphere.
+            </p>
+            <a href="" class="view">View Collection ></a>
+        </div>
+        <img src="asserts/banner2.svg" alt="">
+    </section>
+    <main class="scrollercon">
+        <!-- 500*650 -->
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+    </main>
+    <section class="section2 continue2">
+        <img src="asserts/banner6.svg" alt="">
+        <div class="sectiontxt">
+            <p><strong>G Green</strong><br> Grey skies blanket the city, casting a <br> subdued, tranquil atmosphere.
+            </p>
+        </div>
+    </section>
+    <section class="section3">
+        <video muted autoplay loop src="asserts/malebanner.mp4"></video>
+        <div class="sectiontxt">
+            <p>Grey skies blanket the city, casting a <br> subdued, tranquil atmosphere.
+            </p>
+            <a href="" class="view">View Collection ></a>
+        </div>
+
+    </section>
+    <main class="scrollercon scrollcon2">
+        <!-- 500*750 -->
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+    </main>
+    <section class="section3 continue3">
+        <img src="asserts/banner7.svg" alt="">
+        <div class="sectiontxt">
+            <p><strong>Legit Arm</strong><br> Grey skies blanket the city, casting a <br> subdued, tranquil atmosphere.
+            </p>
+            <a href="" class="view">View</a>
+        </div>
+    </section>
+    <footer>
+        <a href="">&bull; Instragram</a>
+        <a href="">&bull; Youtube</a>
+        <a href="">&bull; LinkedIn</a>
+        <p style="color: #8e8e8e;font-weight: bolder; margin-left: 4em;">&copy;Blckmny</p>
+    </footer>
+</body>
+
+</html>
