@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlckMny</title>
+    <link rel="icon" href="icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="asserts/style.css">
+    <script src="asserts/script.js"></script>
+</head>
+
+<body>
+    <include id="navbarHTML"></include>
+    <section class="homecontent">
+        <div class="sectiontxt">
+            <p><strong>Twenty-three</strong><br> 23 minutes later, the train arrived,<br> ending the prolonged wait.</p>
+            <a href="" class="view">View</a>
+        </div>
+        <img src="asserts/banner1.svg" alt="">
+    </section>
+    <section class="section2">
+        <div class="sectiontxt">
+            <p><strong>G Green</strong><br> Grey skies blanket the city, casting a <br> subdued, tranquil atmosphere.
+            </p>
+            <a href="" class="view">View Collection ></a>
+        </div>
+        <img src="asserts/banner2.svg" alt="">
+    </section>
+    <main class="scrollercon">
+        <!-- 500*650 -->
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+    </main>
+    <section class="section2 continue2">
+        <img src="asserts/banner6.svg" alt="">
+        <div class="sectiontxt">
+            <p><strong>G Green</strong><br> Grey skies blanket the city, casting a <br> subdued, tranquil atmosphere.
+            </p>
+        </div>
+    </section>
+    <section class="section3">
+        <video muted autoplay loop src="asserts/malebanner.mp4"></video>
+        <div class="sectiontxt">
+            <p>Grey skies blanket the city, casting a <br> subdued, tranquil atmosphere.
+            </p>
+            <a href="" class="view">View Collection ></a>
+        </div>
+
+    </section>
+    <main class="scrollercon scrollcon2">
+        <!-- 500*750 -->
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+        <a href="" class="scrolls"><img src="asserts/scrolls.svg" alt="">
+            <div class="scrollsinfo">
+                <p><strong>Lorem ipsum.</strong><br>Lorem ipsum dolor sit.</p>
+                <p class="view">View</p>
+            </div>
+        </a>
+    </main>
+    <section class="section3 continue3">
+        <img src="asserts/banner7.svg" alt="">
+        <div class="sectiontxt">
+            <p><strong>Legit Arm</strong><br> Grey skies blanket the city, casting a <br> subdued, tranquil atmosphere.
+            </p>
+            <a href="" class="view">View</a>
+        </div>
+    </section>
+    <footer>
+        <a href="">&bull; Instragram</a>
+        <a href="">&bull; Youtube</a>
+        <a href="">&bull; LinkedIn</a>
+        <p style="color: #8e8e8e;font-weight: bolder; margin-left: 4em;">&copy;Blckmny</p>
+    </footer>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbarHTML').innerHTML = html;
+            });
+    </script>
+</body>
+
+</html>

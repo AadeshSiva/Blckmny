@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <script src="asserts/script.js"></script>
+    <link rel="stylesheet" href="asserts/style.css">
+    <style>
+        @keyframes inn {
+            from {
+                transform: translateY(-50px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .about {
+            animation: inn 1s ease;
+        }
+
+        footer .navfootera {
+            display: none;
+        }
+
+        footer .backtohomepage {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <include id="navbarHTML"></include>
+    <div id="about" class="about">
+        <div class="aboutnav">
+            <h3>About BlckMny</h3>
+        </div>
+        <div class="aboutus">
+
+            <p class="topic">Inception and Vision</p>
+            <p>Since our establishment in 2024, BlckMny has been on a mission to redefine casual fashion. Our
+                journey began with
+                a vision to create T-shirts that seamlessly blend style and comfort, setting the stage for a brand that
+                resonates with
+                the modern lifestyle. considering your feedbacks <a>blckmny@gmail.com</a>Which help us to create comfort
+                .</p>
+            <p class="topic">Craftsmanship and Quality</p>
+            <p>At the heart of BlckMny lies an unwavering commitment to craftsmanship and quality. Each T-shirt is
+                a testament to
+                our dedication to using <a>premium</a> fabrics and meticulous attention to detail, ensuring that every
+                piece
+                reflects the
+                <a>excellence</a> that defines our brand.
+            </p>
+            <p class="topic">Evolution of Style</p>
+            <p>Over the years, BlckMny has evolved to become a symbol of <a>contemporary</a> fashion. Our designs,
+                inspired by the latest
+                trends and customer preferences, reflect an ever-evolving style that transcends time, offering a perfect
+                balance between
+                on-trend looks and enduring appeal.</p>
+            <p class="topic">Community and Connection</p>
+            <p>Beyond clothing, BlckMny is about building a community and fostering a sense of connection. Our
+                brand is driven by
+                the shared values and experiences of our diverse customer base. We take pride in creating more than just
+                clothing; connect to us through <a href="">BlckMny@gmail.com</a> we
+                create a shared identity..</p>
+            <div id="Locations" class="aboutnav">
+                <h3>Shop Locations</h3>
+            </div>
+            <p class="topic">Chennai, India📍</p>
+            <p>245, T-Nagar, Main road.</p>
+            <div class="locations"><a href=""><img src="asserts/collectionbanner.svg" alt=""></a></div>
+            <p class="topic">Puducherry, India📍</p>
+            <p>124, Muthialpet, near clock tower.</p>
+            <div class="locations"><a href=""><img src="asserts/collectionbanner.svg" alt=""></a></div>
+            <p class="topic">Ooty, India📍</p>
+            <p>3, Hilltop, near Bow rick.</p>
+            <div class="locations"><a href=""><img src="asserts/collectionbanner.svg" alt=""></a></div>
+            <div id="contactus" class="aboutnav">
+                <h3>Contact BlckMny</h3>
+            </div>
+            <p class="topic">Email Us</p>
+            <p>For inquiries, collaborations, or general assistance, reach out to us at <a>blckmny@gmail.com</a>. Our
+                team is
+                ready to
+                respond and provide the support you need.</p>
+            <p class="topic">Customer Support Hotline</p>
+            <p>Have urgent questions or need immediate assistance? Call our customer support hotline at
+                <a>9743456576</a>
+                to connect with our dedicated team.
+            </p>
+            <p class="topic">Connect with us</p>
+            <p>Connect to us through Social media by tagging us on your posts <a href="">@blckmnyofficial</a> on
+                instagram .
+            </p>
+            <p class="topic">Just Need Help ?</p>
+            <p>Check our predefined <a>FAQ's</a> in the help section. check out <a
+                    onclick="menuopen(2),burgerlistinner(7)">Help</a>.
+            </p>
+        </div>
+
+    </div>
+    <footer>
+        <a href="">&bull; Instragram</a>
+        <a href="">&bull; Youtube</a>
+        <a href="">&bull; LinkedIn</a>
+        <p style="color: #8e8e8e;font-weight: bolder; margin-left: 4em;">&copy;Blckmny</p>
+    </footer>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbarHTML').innerHTML = html;
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlckMny</title>
+    <link rel="icon" href="icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="asserts/style.css">
+    <script src="asserts/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="asserts/logo.svg" alt="BlckMny" class="logo"></a>
+        <span class="headeroptions">
+            <img src="asserts/search.svg" alt="search" class="search" onclick="menuopen(0)">
+            <img src="asserts/cart.svg" alt="cart" class="cart" onclick="menuopen(1)">
+            <img id="burger" src="asserts/burger.svg" alt="" class="burger" onclick="menuopen(2)">
+        </span>
+    </header>
+    <nav id="nav">
+        <div class="navnav">
+            <img id="backarr" onclick="menuback()" src="asserts/back.svg" alt="">
+            <img class="wrong" onclick="menuclose()" src="asserts/wrong.svg" alt="">
+        </div>
+        <div id="burgerlist" class="burgerlist">
+            <p onclick="burgerlistinner(0)" class="navtxt">Collections</p>
+            <p onclick="burgerlistinner(1)" class="navtxt">Top</p>
+            <p onclick="burgerlistinner(2)" class="navtxt">Bottom</p>
+            <p onclick="burgerlistinner(3)" class="navtxt">Footware</p>
+            <p onclick="burgerlistinner(4)" class="navtxt">Accessories</p>
+            <p onclick="burgerlistinner(5)" class="navtxt">My Order</p>
+            <p onclick="burgerlistinner(6)" class="navtxt">Account</p>
+            <p onclick="burgerlistinner(7)" class="navtxt">Help</p>
+        </div>
+        <!----------------------------------------------------------------------- collectionlist -->
+        <div id="collectionlist" class="collectionlist burgerlistinner">
+            <p class=" burgerlisthead">Collections</p>
+            <a href="" class="navtxtin">Collection 1</a>
+            <a href="" class="navtxtin">Collection 2</a>
+            <a href="" class="navtxtin">Collection 3</a>
+            <a href="" class="navtxtin">Collection 4</a>
+        </div>
+        <!------------------------------------------------------------------------------- toplist -->
+        <div id="toplist" class="toplist burgerlistinner">
+            <p class=" burgerlisthead">Casuals</p>
+            <a href="" class="navtxtin">Sweatshirts</a>
+            <a href="" class="navtxtin">Hoodies</a>
+            <a href="" class="navtxtin">Sweaters</a>
+            <a href="" class="navtxtin">Party Shirts</a>
+            <p class=" burgerlisthead">Formals</p>
+            <a href="" class="navtxtin">Polo T-Shirts</a>
+            <a href="" class="navtxtin">Plain Shirts</a>
+        </div>
+        <!------------------------------------------------------------------------------- Bottomlist -->
+        <div id="bottomlist" class="bottomlist burgerlistinner">
+            <p class=" burgerlisthead">Bottoms</p>
+            <a href="" class="navtxtin">Full Pants</a>
+            <a href="" class="navtxtin">Shorts</a>
+            <a href="" class="navtxtin">Tracks</a>
+        </div>
+        <!------------------------------------------------------------------------------- footwarelist -->
+        <div id="footwarelist" class="footwarelist burgerlistinner">
+            <p class="searchhead burgerlisthead">Footwares</p>
+            <a href="" class="navtxtin">Sneakers</a>
+            <a href="" class="navtxtin">Slides</a>
+        </div>
+        <!------------------------------------------------------------------------------- accessorieslist -->
+        <div id="accessorieslist" class="accessorieslist burgerlistinner">
+            <p class=" burgerlisthead">Accessories</p>
+            <a href="" class="navtxtin">Chains</a>
+            <a href="" class="navtxtin">Rings</a>
+            <a href="" class="navtxtin">Bracelets</a>
+            <a href="" class="navtxtin">Cap</a>
+        </div>
+        <!----------------------------------------------------------------------------------- accountlist -->
+        <div id="accountlist" class="accountlist burgerlistinner">
+            <div class="optionstop optionstopaccount">
+                <p onclick="profile(2)" id="logout"><img src="asserts/logout.svg" alt="">Log out</p>
+                <p onclick="profile(1)" id="fav"><img id="favim" src="asserts/favw.svg" alt=""> favourites</p>
+                <p onclick="profile(0)" id="alorders"><img src="asserts/orders.svg" alt="">Orders</p>
+                <p id="profilebtn" onclick="profile(3)" style="z-index: 5;">
+                    <img src="asserts/profile.svg" alt="">Profile
+                </p>
+                <p id="editbtn" onclick="usereditOrders()" style="z-index: 5;">
+                    <img src="asserts/edit.svg" alt="">Edit
+                </p>
+            </div>
+            <div id="userdetails" class="userdetails">
+                <span>
+                    <h6>User Name:</h6>
+                    <p id="username" contenteditable="false">Aadesh Siva</p>
+                </span>
+                <span>
+                    <h6>Email:</h6>
+                    <p>iaadeshsiva@gmail.com</p>
+                </span>
+                <span>
+                    <h6>Address:</h6>
+                    <p id="address" contenteditable="false">23, Muthiaya Muthaliar Street, Muthialpet, Puducherry.</p>
+                </span>
+                <span>
+                    <h6>City:</h6>
+                    <p id="city" contenteditable="false">Puducherry.</p>
+                </span>
+                <span>
+                    <h6>Pin Code:</h6>
+                    <p id="pin" contenteditable="false">607536</p>
+                </span>
+                <span>
+                    <h6>Phone:</h6>
+                    <p id="phone" contenteditable="false">9865732187</p>
+                </span>
+            </div>
+        </div>
+        <div id="myorders" class="myorders burgerlistinner">
+            <div class="orderstype">
+                <p id="inprocess" onclick="selectTab(this)">In Process</p>
+                <p onclick="selectTab(this)">Delivered</p>
+                <p onclick="selectTab(this)">My Cart</p>
+            </div>
+            <a href="" class="myorderproducts">
+                <img src="asserts/banner2.svg" alt="">
+                <span class="myorderproductstxt">
+                    <p><strong>&#8377;1000</strong></p>
+                    <p>Product Name</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </span>
+            </a>
+        </div>
+        <div id="logoutcon" class="logoutlist burgerlistinner">
+            <span class="logoutcon">
+                <p>Confirm to log out ?</p>
+                <span>
+                    <p>Confirm</p>
+                    <p onclick="cancelbtn()">Cancel</p>
+                </span>
+            </span>
+        </div>
+        <!------------------------------------------------------------------------------------ Helplist -->
+        <div id="helplist" class="helplist burgerlistinner">
+            <span class="helplisttxt">
+                <p onclick="answer(0)" class="question" id="question1">What is your return policy?<span>+</span>
+                </p>
+                <p class="answer">Our return policy allows returns within 7 days of receipt. Items
+                    must be unused, in
+                    original
+                    packaging. Customers
+                    cover return shipping unless due to our error. Refunds processed promptly. Contact
+                    [support@email.com] for assistance.</p>
+            </span>
+            <span class="helplisttxt">
+                <p onclick="answer(1)" class="question">What are the shipping options available?<span>+</span></p>
+                <p class="answer">We offer standard and expedited shipping options. Standard
+                    delivery takes
+                    approximately 7 days,
+                    while expedited
+                    shipping delivers within 10 days. Shipping costs vary based on the selected option and destination.
+                </p>
+            </span>
+            <span class="helplisttxt">
+                <p onclick="answer(2)" class="question">How do I place an order?<span>+</span></p>
+                <p class="answer">To place an order, browse our website, add desired items to your
+                    cart, and proceed to
+                    checkout. Provide shipping and
+                    payment details, review your order, then confirm your purchase. You'll receive an order confirmation
+                    via email.</p>
+            </span>
+            <span class="helplisttxt">
+                <p onclick="answer(3)" class="question">How can I track the status of my order?<span>+</span></p>
+                <p class="answer">To track your order, log in to your account, go to the order
+                    history section, and
+                    select the specific order. You'll find
+                    real-time updates, including shipping status and tracking information. Alternatively, check your
+                    email for order status
+                    notifications.</p>
+            </span>
+            <span class="helplisttxt">
+                <p onclick="answer(4)" class="question">Where can I find your terms and conditions?<span>+</span>
+                </p>
+                <p class="answer">You can find our terms and conditions by scrolling to the bottom
+                    of our website and
+                    clicking on the "Terms and
+                    Conditions" link. Additionally, you can access them during the checkout process.</p>
+            </span>
+            <span class="helplisttxt">
+                <p onclick="answer(5)" class="question">What payment methods do you accept?<span>+</span></p>
+                <p class="answer">We accept various payment methods, including credit/debit cards
+                    (Visa, MasterCard,
+                    American Express), PayPal, and other
+                    secure online payment options. Choose your preferred method during the checkout process for a
+                    seamless transaction.</p>
+            </span>
+            <span class="helplisttxt">
+                <p onclick="answer(6)" class="question">How can I contact customer support? <span>+</span>
+                </p>
+                <p class="answer">For assistance, contact our customer support team at
+                    [support@email.com] or call
+                    [customer support phone number]. Our
+                    dedicated team is available to help you with any questions or concerns during our business hours.
+                </p>
+            </span>
+        </div>
+        <!-- --------------------------------------------------------------------------------------------------search -->
+        <div id="searchlist" class="searchlist">
+            <form class="searchinput">
+                <input autocomplete="off" placeholder="Search" type="search" value="" id="searchin" onkeyup="search()">
+            </form>
+            <!---------------------------------------------------------suggestions -->
+            <div class="links Suggested" id="Suggested">
+                <p id="sughead" class="searchhead suggesthead">Suggested links</p>
+                <p class="searchhead" id="notfound">&#128683; Product Not Found</p>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">Red shirt</a>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">Red pant</a>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">white pant</a>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">green shirt</a>
+                <a href="" class=" Suggestlink"><img src="asserts/searchw.svg" alt="">yellow pant</a>
+            </div>
+            <!---------------------------------------------------------suggestions -->
+            <div class="trend" id="trend">
+                <p class="searchhead">Trending links</p>
+                <a href="" class="navtxt"><img src="asserts/trend.svg" alt="">Trend 1</a>
+                <a href="" class="navtxt"><img src="asserts/trend.svg" alt="">Trend 2</a>
+                <a href="" class="navtxt"><img src="asserts/trend.svg" alt="">Trend 3</a>
+                <a href="" class="navtxt"><img src="asserts/trend.svg" alt="">Trend 4</a>
+            </div>
+        </div>
+
+        <footer class="navfooter">
+            <a class="navfootera" href="info.html">&bull; About</a>
+            <a class="navfootera" href="info.html#Locations">&bull; Locations</a>
+            <a class="navfootera" href="info.html#contactus">&bull; Contact</a>
+            <a class="backtohomepage" href="index.html">&lt; Back to home page</a>
+            <a class="backtohomepage" href="">&bull; All Products</a>
+            <p style="color: #7f7f7f;font-weight: bolder; margin-left: 4em;">&copy;Blckmny</p>
+        </footer>
+    </nav>
+
+</body>
+
+</html>
